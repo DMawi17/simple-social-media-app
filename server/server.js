@@ -1,15 +1,15 @@
 import express from "express";
 import mongoose from "mongoose";
-import dotenv from "dotenv";
+import config from "../config/config.js";
 
 const { connect, connection } = mongoose;
 
 const app = express();
-dotenv.config();
 
-connect(process.env.MONGO_URI);
+connect(config.mongoUri);
 
 connection.on("connected", () => console.log("DB Connection established!"));
 
-const port = 3000;
-app.listen(port, () => console.log("Server running at %s.", port));
+app.listen(config.port, () =>
+    console.log("Server running at %s.", config.port)
+);
