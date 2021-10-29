@@ -1,9 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: 2px solid red;
 }
 
 body {
-    background-color: #bebec0;
+    font-family: "Poppins", sans-serif;
+}
+
+.App {
+}
+
+.navbar {
+    background-color: papayawhip;
+
+    .navbarWrapper {
+        padding: 0 10px;
+
+        .navbarLeft {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            .logo {
+                width: 70%;
+                font-size: 25px;
+                color: darkblue;
+                font-weight: 400;
+                cursor: pointer;
+            }
+            .homeIcon {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                cursor: pointer;
+            }
+        }
+        .navbarRight {
+            
+        }
+    }
 }
