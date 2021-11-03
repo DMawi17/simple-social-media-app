@@ -15,10 +15,7 @@ const auth = {
     },
 
     // clear JWT credentials from sessionStorage.
-    clearJWT(cb) {
-        if (typeof window !== "undefined") sessionStorage.removeItem("jwt");
-        cb();
-    },
+    clearJWT() {}, // TODO:
 };
 
 export default auth;

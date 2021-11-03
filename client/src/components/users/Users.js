@@ -28,7 +28,6 @@ export default function Users() {
         return function cleanup() {
             abortController.abort();
         };
-        
     }, []);
 
     return (
@@ -38,7 +37,7 @@ export default function Users() {
                 <List sx={{ width: "100%", maxWidth: 360 }}>
                     {users.map((user, i) => {
                         return (
-                            <Link to={"/user/" + user._id} key={i}>
+                            <Link to={"/user/" + user._id} key={user._id}>
                                 <ListItem>
                                     <ListItemAvatar>
                                         <Avatar>

@@ -14,7 +14,7 @@ const login = async (req, res) => {
             });
         }
 
-        const maxAge = 60;
+        const maxAge = 3 * 60;
         const token = jwt.sign({ _id: user._id }, config.secret, {
             expiresIn: maxAge,
         });
@@ -22,6 +22,7 @@ const login = async (req, res) => {
         res.cookie("t", token, {
             /* httpOnly: true, */ maxAge: maxAge * 1000,
         });
+
         return res.json({
             token,
             user: {

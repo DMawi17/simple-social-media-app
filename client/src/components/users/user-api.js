@@ -1,6 +1,7 @@
 const url = "http://localhost:3001/users/";
 
 const create = (user) => {
+    // FIXME:
     const config = {
         method: "POST",
         headers: {
@@ -56,4 +57,6 @@ const update = async (params, credentials, user) => {
     }
 };
 
-export { create, list, read, update };
+const remove = () => {}; // TODO:
+
+export { create, list, read, update, remove };

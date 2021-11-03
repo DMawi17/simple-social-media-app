@@ -15,6 +15,6 @@ const login = async (user) => {
     }
 };
 
-const logout = () => {};
+const logout = () => {}; // TODO:
 
 export { login, logout };

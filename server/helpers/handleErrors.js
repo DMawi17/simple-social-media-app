@@ -3,7 +3,7 @@ const handleErrors = (err) => {
     // let errors = { email: "", password: "" };
     let errors = {};
 
-    // Duplicate errors:
+    // Duplication error:
     if (err.code === 11000) {
         errors.email = "Email already exists";
         return errors;
