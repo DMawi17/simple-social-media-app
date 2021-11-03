@@ -1,73 +1,72 @@
 # simple-social-media-app
 
-## In the project directory, you can run:
-
-To install dependencies run:
+To install dependencies and start the client side, run the following command from the project directory:
 
 ```zsh
-$ yarn
+$ cd client && yarn && yarn start
 ```
 
-And to run the app in the development mode:
+This will open a browser window in the http://localhost:3006.
+
+And then on a separate terminal run the following command to start the server side code in development mode:
 
 ```zsh
-yarn start
+yarn dev
 ```
 
-Open http://localhost:3000 to view it in the browser.
+You can open http://localhost:3001 to view it in the browser.
 
-## Folder Structure:
+## Client-side Folder Structure
 
 ```zsh
-
+client/
+├── package.json
+├── public/
+│  └── index.html
+├── src/
+│  ├── App.js
+│  ├── app.scss
+│  ├── components/
+│  │  ├── auth/
+│  │  │  ├── auth-api.js
+│  │  │  ├── auth-helper.js
+│  │  │  └── SignIn.js
+│  │  ├── Menu.js
+│  │  └── users/
+│  │     ├── DeleteUser.js
+│  │     ├── EditProfile.js
+│  │     ├── Home.js
+│  │     ├── Profile.js
+│  │     ├── SignUp.js
+│  │     ├── user-api.js
+│  │     └── Users.js
+│  └── index.js
+└── yarn.lock
 ```
 
-## backend components features:
+## Backend components features
 
--   Users can register useing their email address.
--   Auth, register users can sign-in and sign-out.
--   after sign-in users can see, edit and delete their profile.
+-   Any user have access to the user list.
+-   Users can register using their email and password.
+-   Users can login using their email and password.
+-   Only authenticated users can access any user profile.
+-   Authenticated users have authorization to edit and delete only their profile.
 
-### User model
+## Server-side Folder Structure
 
--   Name
--   Email
--   Password
--   CreatedAt
--   UpdatedAt
-
-## Auth with JSON Web Tokens ..
-
-## API endpoints for user CRUD
-
--   Create a user /api/users => POST
--   List all users => /api/users => GET
--   Fetch a user => /api/users/:userId => GET
--   Update a user => /api/users/:userId => PUT
--   Delete a user => /api/users/:userId => DELETE
--   User sign-in => /auth/signin => POST
--   User signout => /auth/signout => GET
-
-
-## Folder Structure for Backend:
 ```zsh
-├──  server
-│	├──  controllers
-│	│  ├──  auth.controller.js
-│	│  └──  user.controller.js
-│	├──  helpers
-│	│  └── handleErrors.js
-│	├──  models
-│	│  └──  user.model.js
-│	├──  routes
-│	│  ├──  auth.routes.js
-│	│  └──  user.routes.js
-│	├──  express.js
-│	└──  server.js
+server/
+├── config
+│  └── config.js
+├── controllers/
+│  ├── auth.controller.js
+│  └── users.controller.js
+├── helpers/
+│  └── handleErrors.js
+├── models/
+│  └── user.model.js
+├── routes/
+│  ├── auth.route.js
+│  └── users.route.js
+└── server.js
 ```
-
-## Libraries:
-
-- joi
-- bcrypt
-- jwt
