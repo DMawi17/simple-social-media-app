@@ -24,7 +24,7 @@ const list = async (req, res) => {
 };
 
 const userById = async (req, res, next, id) => {
-
+    console.log(id);
     try {
         let user = await User.findById(id);
         if (!user) res.status(400).json({ error: "User not found." });
@@ -38,7 +38,8 @@ const userById = async (req, res, next, id) => {
 };
 
 const read = (req, res) => {
-    console.log(req.profile);
+    // console.log(req.profile);
+    // console.log(req.auth);
     req.profile.password = undefined;
     return res.json(req.profile);
 };

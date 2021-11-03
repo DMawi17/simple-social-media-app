@@ -9,7 +9,7 @@ const { isEmail } = validator;
 const UserSchema = new Schema({
     name: {
         type: String,
-        required: true,
+        // required: true,
         minlength: 3,
     },
     email: {
@@ -21,7 +21,7 @@ const UserSchema = new Schema({
     },
     password: {
         type: String,
-        required: true,
+        // required: true,
         maxLength: 1024,
         minlength: 6,
     },

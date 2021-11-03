@@ -14,14 +14,21 @@ const login = async (req, res) => {
             });
         }
 
-        const token = jwt.sign({ _id: user._id }, config.secret);
-        res.cookie("t", token);
+        const maxAge = 60;
+        const token = jwt.sign({ _id: user._id }, config.secret, {
+            expiresIn: maxAge,
+        });
+
+        res.cookie("t", token, {
+            /* httpOnly: true, */ maxAge: maxAge * 1000,
+        });
         return res.json({
-            // token,
+            token,
             user: {
                 _id: user._id,
                 name: user.name,
                 email: user.email,
+                createdAt: user.created,
             },
         });
     } catch (err) {
@@ -40,7 +47,10 @@ const requireLogin = expressJwt({
     algorithms: ["HS256"],
 });
 
+// Checks if the auth user is the same as the user being updated or deleted.
 const hasAuthorization = (req, res, next) => {
+    // The req.auth object is populated by expressJwt after authentication.
+    // The req.profile is populated by the userByID function.
     const authorized =
         req.profile && req.auth && req.profile._id == req.auth._id;
     if (!authorized) {
