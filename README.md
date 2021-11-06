@@ -1,5 +1,7 @@
 # simple-social-media-app
 
+## Still in constuction..
+
 To install dependencies and start the client side, run the following command from the project directory:
 
 ```zsh
