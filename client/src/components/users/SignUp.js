@@ -19,6 +19,7 @@ export default function SingUp() {
     };
 
     const clickSubmit = () => {
+        // FIXME:
         const user = {
             name: values.name,
             email: values.email,
@@ -73,6 +74,7 @@ export default function SingUp() {
                             onChange={handleChange("password")}
                             label="Password"
                             size="small"
+                            
                         />
                     </FormControl>
 

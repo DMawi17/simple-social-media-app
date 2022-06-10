@@ -46,11 +46,11 @@ client/
 
 ## Backend components features
 
--   Any user have access to the user list.
--   Users can register using their email and password.
--   Users can login using their email and password.
--   Only authenticated users can access any user profile.
--   Authenticated users have authorization to edit and delete only their profile.
+- Any user have access to the user list.
+- Users can register using their email and password.
+- Users can login using their email and password.
+- Only authenticated users can access any user profile.
+- Authenticated users have authorization to edit and delete only their profile.
 
 ## Server-side Folder Structure
 
