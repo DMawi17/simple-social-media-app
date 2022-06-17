@@ -10,7 +10,7 @@
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.9.3",
     "@mui/icons-material": "^5.8.4",
-    "@mui/material": "^5.0.6",
+    "@mui/material": "^5.8.4",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
