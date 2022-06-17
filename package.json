@@ -7,7 +7,7 @@
   "author": "DMawi17 <75326045+DMawi17@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
-    "@emotion/react": "^11.5.0",
+    "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.8.4",
